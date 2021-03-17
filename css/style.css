@@ -151,6 +151,7 @@ body {
 }
 
 .header__logo {
+  width: 1px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 290px;
           flex: 0 0 290px;
@@ -186,6 +187,11 @@ body {
 
 .menu-header__list li:last-child {
   margin-right: 0;
+}
+
+.menu-header__link {
+  color: #fff;
+  text-decoration: none;
 }
 
 .menu-header__contacts {
