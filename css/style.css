@@ -363,17 +363,16 @@ body {
   font-size: 35px;
   border-radius: 22px;
   background-color: #ffe500;
-  -webkit-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
 }
 
 .btn:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#ffe500), to(#451db9));
-  background: -o-linear-gradient(left, #ffe500 0%, #451db9 100%);
-  background: linear-gradient(90deg, #ffe500 0%, #451db9 100%);
   color: #fff;
-  background-color: #451db9;
+  background-color: #2a2a72;
+  background-image: -o-linear-gradient(135deg, #2a2a72 0%, #009ffd 74%);
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 }
 
 .title {
@@ -405,6 +404,7 @@ body {
 }
 
 .logo {
+  padding-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,21 +414,17 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: all 0.7s ease 0s;
-  -o-transition: all 0.7s ease 0s;
-  transition: all 0.7s ease 0s;
   cursor: pointer;
-}
-
-.logo:hover {
-  -webkit-transform: scale(1.3);
-      -ms-transform: scale(1.3);
-          transform: scale(1.3);
 }
 
 .logo__name {
   font-family: "Vampiro One";
   font-size: 40px;
+}
+
+.menu-header {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .menu-header__link {
@@ -476,6 +472,10 @@ body {
   -webkit-transform: rotate(360deg);
       -ms-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+.header__burger {
+  display: none;
 }
 
 .greeting__title {
@@ -570,7 +570,7 @@ body {
 }
 
 .about-us__text {
-  font-size: 34px;
+  font-size: 30px;
   line-height: 123.52941%;
 }
 
@@ -656,7 +656,7 @@ body {
 }
 
 .gallery__title {
-  margin-bottom: 65px;
+  margin-bottom: 35px;
 }
 
 .gallery__slider {
@@ -664,7 +664,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 50px;
-  padding-top: 15px;
+  padding-top: 30px;
 }
 
 .gallery__slide {
@@ -673,8 +673,8 @@ body {
           flex: 0 0 31.0559%;
   margin-right: 30px;
   padding: 0 0px 28% 0;
-  -webkit-box-shadow: 10px -11px 5px 0px rgba(69, 29, 185, 0.6);
-          box-shadow: 10px -11px 5px 0px rgba(69, 29, 185, 0.6);
+  -webkit-box-shadow: 10px -11px 20px 0px rgba(69, 29, 185, 0.6);
+          box-shadow: 10px -11px 20px 0px rgba(69, 29, 185, 0.6);
 }
 
 .gallery__slide:last-child {
@@ -692,12 +692,12 @@ body {
 
 .gallery__dotts span {
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffe500), to(#451db9));
-  background: -o-linear-gradient(#ffe500 0%, #451db9 100%);
-  background: linear-gradient(#ffe500 0%, #451db9 100%);
+  background-color: #fbb034;
+  background-image: -o-linear-gradient(135deg, #fbb034 0%, #ffdd00 74%);
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
   position: relative;
 }
 
@@ -712,7 +712,9 @@ body {
   -webkit-transform: scale(1.3);
       -ms-transform: scale(1.3);
           transform: scale(1.3);
-  background: #ffe500;
+  background-color: #2a2a72;
+  background-image: -o-linear-gradient(135deg, #2a2a72 0%, #009ffd 74%);
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 }
 
 .gallery__hover {
@@ -721,14 +723,14 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  -webkit-transition: -webkit-transform .3s ease 0s;
-  transition: -webkit-transform .3s ease 0s;
-  -o-transition: transform .3s ease 0s;
-  transition: transform .3s ease 0s;
-  transition: transform .3s ease 0s, -webkit-transform .3s ease 0s;
-  -webkit-transform: translate(0px, -105%);
-      -ms-transform: translate(0px, -105%);
-          transform: translate(0px, -105%);
+  -webkit-transition: -webkit-transform .5s ease 0s;
+  transition: -webkit-transform .5s ease 0s;
+  -o-transition: transform .5s ease 0s;
+  transition: transform .5s ease 0s;
+  transition: transform .5s ease 0s, -webkit-transform .5s ease 0s;
+  -webkit-transform: translate(0px, -120%);
+      -ms-transform: translate(0px, -120%);
+          transform: translate(0px, -120%);
 }
 
 .hover-item-gallery {
