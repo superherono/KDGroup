@@ -832,7 +832,7 @@ body {
 }
 
 .prices__title {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .prices__cards {
@@ -844,12 +844,12 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 -30px;
-  padding-top: 80px;
+  padding-top: 20px;
   overflow: hidden;
 }
 
 .prices .prices__hover {
-  top: 42%;
+  top: 48%;
   height: auto;
   -webkit-transform: translate(0px, 200%);
       -ms-transform: translate(0px, 200%);
@@ -891,8 +891,8 @@ body {
 }
 
 .prices .prices__hover .hover-item-gallery__btn {
-  width: 270px;
-  padding: 17px 0;
+  width: 200px;
+  padding: 8px 0;
   margin: 0;
 }
 
@@ -922,7 +922,7 @@ body {
 }
 
 .card-prices__image img {
-  border-radius: 17px;
+  border-radius: 129px;
   z-index: 2;
 }
 
@@ -1047,9 +1047,9 @@ body {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    -webkit-transform: translate(0, -30%) scale(1.1);
-        -ms-transform: translate(0, -30%) scale(1.1);
-            transform: translate(0, -30%) scale(1.1);
+    -webkit-transform: translate(0, -15%) scale(1);
+        -ms-transform: translate(0, -15%) scale(1);
+            transform: translate(0, -15%) scale(1);
   }
 }
 
