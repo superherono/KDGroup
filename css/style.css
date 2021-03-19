@@ -964,7 +964,7 @@ body {
 }
 
 .contacts__title {
-  margin-bottom: 35px;
+  margin-bottom: 50px;
 }
 
 .contacts__columns {
@@ -1014,6 +1014,20 @@ body {
 
 .contacts__btn:hover a {
   color: #fff;
+}
+
+.contacts__label {
+  margin-bottom: 20px;
+  font-family: "Museo-500";
+  font-size: 34px;
+}
+
+.contacts__photo {
+  margin-bottom: 20px;
+}
+
+.contacts__photo img {
+  border-radius: 50%;
 }
 
 .footer {
