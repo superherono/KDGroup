@@ -58,6 +58,55 @@ container.addEventListener('click', function (e) {
 	});
 	setTimeout(arrowCenter.classList.add('_active'), 888000);
 });
+//==================Smooth Scroll========================
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let anchor of anchors) {
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault()
+
+		const blockID = anchor.getAttribute('href').substr(1);
+
+		document.getElementById(blockID).scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		});
+	});
+}
+//========================================================================================================================================================
+const t = [
+	'Дизайн и сайты</br>',
+	'под ключ'
+];
+
+function typeText() {
+	let line = 0;
+	let count = 0;
+	let out = '';
+	let htmlOut = document.querySelector('.out');
+
+	function typeLine() {
+		let interval = setTimeout(function () {
+			out += t[line][count];
+			htmlOut.innerHTML = out + '|';
+			count++;
+
+			if (count >= t[line].length) {
+				count = 0;
+				line++;
+				if (line == t.length) {
+					clearTimeout(interval);
+					htmlOut.innerHTML = out;
+					return true;
+				}
+			}
+			typeLine();
+		}, 150);
+	}
+
+	typeLine();
+}
+typeText();
 "use strict";
 
 // Dynamic Adapt v.1

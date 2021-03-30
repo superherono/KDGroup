@@ -344,6 +344,17 @@ body.lock {
   left: 0;
 }
 
+._anchor {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: inline-block;
+}
+
 ._swiper {
   overflow: hidden;
 }
@@ -505,6 +516,13 @@ body.lock {
 
 .greeting__title {
   margin-bottom: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .greeting__title span {
@@ -576,6 +594,10 @@ body.lock {
   display: none;
 }
 
+.about-us {
+  position: relative;
+}
+
 .about-us__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -615,6 +637,10 @@ body.lock {
 
 .about-us__br_2 {
   display: none;
+}
+
+.services {
+  position: relative;
 }
 
 .services__title {
@@ -716,6 +742,10 @@ body.lock {
 
 .item-features__title_br {
   display: none;
+}
+
+.gallery {
+  position: relative;
 }
 
 .gallery__title {
@@ -961,6 +991,10 @@ body.lock {
 
 .card-prices__item:last-child {
   margin-bottom: 0;
+}
+
+.contacts {
+  position: relative;
 }
 
 .contacts__title {
