@@ -13,20 +13,6 @@ testWebP(function (support) {
 	}
 });
 
-//=======================BURGER====================
-const burger = document.querySelector('.header__burger')
-const mobileMenu = document.querySelector('.menu-header')
-const classNameActive = '_active'
-const classNameLock = 'lock'
-const elements = [burger, mobileMenu]
-
-function toggleClass(elements, classNameActive, classNameLock) {
-	elements.forEach(element => element.classList.toggle(classNameActive))
-	document.querySelector('body').classList.toggle(classNameLock)
-}
-
-burger.onclick = () => toggleClass(elements, classNameActive, classNameLock)
-
 
 //======================IBG===============
 function ibg() {
@@ -73,7 +59,7 @@ for (let anchor of anchors) {
 		});
 	});
 }
-//========================================================================================================================================================
+//=============Печетание текста=================================================
 const t = [
 	'Дизайн и сайты </br>',
 	'под ключ'
@@ -430,3 +416,34 @@ if (animItems.length > 0) {
 
 }
 //=================================================
+//===========BURGER==================================================
+const burger = document.querySelector('.header__burger')
+const mobileMenu = document.querySelector('.menu-header')
+
+const classNameActive = '_active'
+const classNameLock = 'lock'
+const elements = [burger, mobileMenu]
+
+function toggleClass(elements, classNameActive, classNameLock) {
+    elements.forEach(element => element.classList.toggle(classNameActive))
+    document.querySelector('body').classList.toggle(classNameLock)
+}
+
+//Закрываем бурег по клику на ссылку внутри
+function burgerClose() {
+    elements.forEach(element => element.classList.toggle(classNameActive));
+}
+
+const links = document.querySelectorAll('.menu-header__link');
+if (links.length > 0) {
+    for (let index = 0; index < links.length; index++) {
+        const el = links[index];
+        el.addEventListener('click', function (e) {
+            burgerClose(el.closest('.menu-header'));
+            e.preventDefault();
+        });
+    }
+}
+
+burger.onclick = () => toggleClass(elements, classNameActive, classNameLock)
+links.onclick = () => toggleClass(elements, classNameActive, classNameLock)

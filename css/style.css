@@ -1960,6 +1960,14 @@ body.lock {
     display: inline-block;
   }
 
+  .gallery .arrow-right {
+    display: none;
+  }
+
+  .gallery .arrow-left {
+    display: none;
+  }
+
   .footer__logo .logo__icon img {
     width: 57px;
   }
