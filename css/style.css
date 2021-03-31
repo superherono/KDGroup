@@ -480,6 +480,21 @@ body.lock {
   white-space: nowrap;
   padding-right: 10px;
   cursor: pointer;
+  position: relative;
+}
+
+.menu-header__list li::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #451db9;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .menu-header__list li:last-child {
@@ -488,6 +503,10 @@ body.lock {
 
 .menu-header__list li:hover a {
   color: #451db9;
+}
+
+.menu-header__list li:hover::after {
+  width: 100%;
 }
 
 .contacts-header {
@@ -914,6 +933,9 @@ body.lock {
   -webkit-transform: scale(1.3);
       -ms-transform: scale(1.3);
           transform: scale(1.3);
+  -webkit-transition: all .1s ease 0s;
+  -o-transition: all .1s ease 0s;
+  transition: all .1s ease 0s;
   background-color: #2a2a72;
   background-image: -o-linear-gradient(135deg, #2a2a72 0%, #009ffd 74%);
   background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
@@ -926,7 +948,7 @@ body.lock {
 }
 
 .gallery .arrow-right img {
-  width: 60px;
+  width: 50px;
 }
 
 .gallery .arrow-left {
@@ -936,7 +958,7 @@ body.lock {
 }
 
 .gallery .arrow-left img {
-  width: 60px;
+  width: 50px;
 }
 
 .gallery__main-photo {
