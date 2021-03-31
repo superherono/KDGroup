@@ -420,18 +420,19 @@ if (animItems.length > 0) {
 const burger = document.querySelector('.header__burger')
 const mobileMenu = document.querySelector('.menu-header')
 
-const classNameActive = '_active'
-const classNameLock = 'lock'
+const classNameActive = '_active';
+const classNameLock = 'lock';
 const elements = [burger, mobileMenu]
 
 function toggleClass(elements, classNameActive, classNameLock) {
-    elements.forEach(element => element.classList.toggle(classNameActive))
-    document.querySelector('body').classList.toggle(classNameLock)
+    elements.forEach(element => element.classList.toggle(classNameActive));
+    document.querySelector('body').classList.toggle(classNameLock);
 }
 
 //Закрываем бурег по клику на ссылку внутри
 function burgerClose() {
     elements.forEach(element => element.classList.toggle(classNameActive));
+    document.querySelector('body').classList.toggle(classNameLock);
 }
 
 const links = document.querySelectorAll('.menu-header__link');
