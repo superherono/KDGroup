@@ -383,6 +383,7 @@ body.lock {
   width: 333px;
   padding: 17px 0;
   color: #000;
+  line-height: normal;
   font-weight: 700;
   font-size: 35px;
   border-radius: 22px;
@@ -578,6 +579,7 @@ body.lock {
 
 .greeting__btn {
   margin: 0px 0px 43px 0px;
+  font-size: 35px;
 }
 
 .greeting__image {
@@ -624,11 +626,27 @@ body.lock {
 
 .about-us__title {
   margin: 0px 0px 25px 0px;
+  opacity: 0;
+  -webkit-transition: all 0.6s ease .1s;
+  -o-transition: all 0.6s ease .1s;
+  transition: all 0.6s ease .1s;
+}
+
+.about-us__title._active {
+  opacity: 1;
 }
 
 .about-us__text {
   font-size: 30px;
   line-height: 120%;
+  opacity: 0;
+  -webkit-transition: all 0.6s ease .4s;
+  -o-transition: all 0.6s ease .4s;
+  transition: all 0.6s ease .4s;
+}
+
+.about-us__text._active {
+  opacity: 1;
 }
 
 .about-us__text span {
@@ -660,6 +678,51 @@ body.lock {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 33.333%;
           flex: 0 1 33.333%;
+}
+
+.services__card_first {
+  -webkit-transform: translate(-150px, 0px);
+      -ms-transform: translate(-150px, 0px);
+          transform: translate(-150px, 0px);
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.services__card_first._active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+.services__card_last {
+  -webkit-transform: translate(150px, 0px);
+      -ms-transform: translate(150px, 0px);
+          transform: translate(150px, 0px);
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.services__card_last._active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+.services__card_middle {
+  -webkit-transform: translate(0px, 150px);
+      -ms-transform: translate(0px, 150px);
+          transform: translate(0px, 150px);
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.services__card_middle._active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 .services__card_middle p {
@@ -715,6 +778,50 @@ body.lock {
       -ms-flex: 0 1 44.40994%;
           flex: 0 1 44.40994%;
   margin-bottom: 50px;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease;
+  -o-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+}
+
+.features__item:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+       -o-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.features__item:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+       -o-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.features__item:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+       -o-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.features__item:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.features__item:nth-child(5) {
+  -webkit-transition-delay: 0.5s;
+       -o-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.features__item:nth-child(6) {
+  -webkit-transition-delay: 0.6s;
+       -o-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.features__item._active {
+  opacity: 1;
 }
 
 .features__item:nth-child(odd) {
@@ -781,6 +888,10 @@ body.lock {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
 .gallery__arrow {
@@ -806,6 +917,26 @@ body.lock {
   background-color: #2a2a72;
   background-image: -o-linear-gradient(135deg, #2a2a72 0%, #009ffd 74%);
   background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+
+.gallery .arrow-right {
+  -webkit-transform: rotate(-270deg);
+      -ms-transform: rotate(-270deg);
+          transform: rotate(-270deg);
+}
+
+.gallery .arrow-right img {
+  width: 60px;
+}
+
+.gallery .arrow-left {
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.gallery .arrow-left img {
+  width: 60px;
 }
 
 .gallery__main-photo {
@@ -1148,7 +1279,7 @@ body.lock {
 }
 
 ._no-webp .wrapper{
-  background: url("../img/icons/flower-m.png") 92% 100px no-repeat, url("../img/icons/flower-s.png") -7.9% 63px no-repeat, url("../img/icons/square3.png") 104% 1150px no-repeat, url("../img/icons/flower-s.png") 1.1% 1379px no-repeat, url("../img/icons/square-second.png") -10.9% 2077px no-repeat, url("../img/icons/flower-s.png") 101% 2032px no-repeat, url("../img/icons/flower-s.png") 1.1% 2732px no-repeat, url("../img/icons/square-second.png") 109% 3177px no-repeat, url("../img/icons/flower-s.png") -6% 3732px no-repeat, url("../img/icons/flower-s.png") 86% 4185px no-repeat, url("../img/icons/square3.png") 109% 4380px no-repeat; }
+  background: url("../img/icons/flower-s.png") -7.9% 63px no-repeat, url("../img/icons/square3.png") 104% 1150px no-repeat, url("../img/icons/flower-s.png") 1.1% 1379px no-repeat, url("../img/icons/square-second.png") -10.9% 2077px no-repeat, url("../img/icons/flower-s.png") 101% 2032px no-repeat, url("../img/icons/flower-s.png") 1.1% 2732px no-repeat, url("../img/icons/square-second.png") 109% 3177px no-repeat, url("../img/icons/flower-s.png") -6% 3732px no-repeat, url("../img/icons/flower-s.png") 86% 4185px no-repeat, url("../img/icons/square3.png") 109% 4380px no-repeat; }
 
 .wrapper {
   width: 100%;
@@ -1203,6 +1334,11 @@ body.lock {
 
 .page__footer {
   padding: 20px 0;
+}
+
+@media (min-width: 767.98px) {
+  ._no-webp .greeting__container{
+    background: url("../img/icons/flower-m.png") 103% 56% no-repeat; }
 }
 
 @media (min-width: 991.98px) {
@@ -1978,11 +2114,12 @@ body.lock {
   }
 
   .greeting__btn {
-    width: 162px;
+    width: 178px;
+    padding: 10px 0;
   }
 
   .greeting__image {
-    margin-top: -45px;
+    margin-top: 0;
   }
 
   .greeting__img_m {
@@ -2067,7 +2204,7 @@ body.lock {
   }
 
   ._no-webp .wrapper{
-    background: url("../img/icons/flower-m.png") 103% 134px/181px no-repeat, url("../img/icons/flower-s.png") -94.9% 6120px no-repeat, url("../img/icons/square3.png") 424% 1058px no-repeat, url("../img/icons/flower-s.png") -160.9% 1462px no-repeat, url("../img/icons/square-second.png") -463% 2077px no-repeat, url("../img/icons/flower-s.png") 103% 2432px no-repeat, url("../img/icons/flower-s.png") 171.9% 6553px no-repeat, url("../img/icons/square-second.png") 417% 3131px no-repeat, url("../img/icons/flower-s.png") -155% 3832px no-repeat, url("../img/icons/flower-s.png") -147% 7002px no-repeat, url("../img/icons/square-second.png") 427% 7808px no-repeat; }
+    background: url("../img/icons/flower-m.png") 107% 220px/181px no-repeat, url("../img/icons/flower-s.png") -94.9% 6120px no-repeat, url("../img/icons/square3.png") 424% 1058px no-repeat, url("../img/icons/flower-s.png") -160.9% 1462px no-repeat, url("../img/icons/square-second.png") -463% 2077px no-repeat, url("../img/icons/flower-s.png") 103% 2670px/153px no-repeat, url("../img/icons/flower-s.png") 171.9% 6553px no-repeat, url("../img/icons/square-second.png") 417% 3131px no-repeat, url("../img/icons/flower-s.png") -155% 3832px no-repeat, url("../img/icons/flower-s.png") -147% 7002px no-repeat, url("../img/icons/square-second.png") 427% 7808px no-repeat; }
 
   .page__greeting {
     padding-top: 110px;
@@ -2092,7 +2229,12 @@ body.lock {
 
 ._webp .footer__text_copyright::before{ background: url(../img/icons/footer/copyright.webp) 0 0 no-repeat; }
 
-._webp .wrapper{ background: url(../img/icons/flower-m.webp) 92% 100px no-repeat, url(../img/icons/flower-s.webp) -7.9% 63px no-repeat, url(../img/icons/square3.webp) 104% 1150px no-repeat, url(../img/icons/flower-s.webp) 1.1% 1379px no-repeat, url(../img/icons/square-second.webp) -10.9% 2077px no-repeat, url(../img/icons/flower-s.webp) 101% 2032px no-repeat, url(../img/icons/flower-s.webp) 1.1% 2732px no-repeat, url(../img/icons/square-second.webp) 109% 3177px no-repeat, url(../img/icons/flower-s.webp) -6% 3732px no-repeat, url(../img/icons/flower-s.webp) 86% 4185px no-repeat, url(../img/icons/square3.webp) 109% 4380px no-repeat; }
+._webp .wrapper{ background: url(../img/icons/flower-s.webp) -7.9% 63px no-repeat, url(../img/icons/square3.webp) 104% 1150px no-repeat, url(../img/icons/flower-s.webp) 1.1% 1379px no-repeat, url(../img/icons/square-second.webp) -10.9% 2077px no-repeat, url(../img/icons/flower-s.webp) 101% 2032px no-repeat, url(../img/icons/flower-s.webp) 1.1% 2732px no-repeat, url(../img/icons/square-second.webp) 109% 3177px no-repeat, url(../img/icons/flower-s.webp) -6% 3732px no-repeat, url(../img/icons/flower-s.webp) 86% 4185px no-repeat, url(../img/icons/square3.webp) 109% 4380px no-repeat; }
+
+@media (min-width: 767.98px){
+
+  ._webp .greeting__container{ background: url(../img/icons/flower-m.webp) 103% 56% no-repeat; }
+}
 
 @media (max-width: 768px){
 
@@ -2101,5 +2243,5 @@ body.lock {
 
 @media (max-width: 479.98px){
 
-  ._webp .wrapper{ background: url(../img/icons/flower-m.webp) 103% 134px/181px no-repeat, url(../img/icons/flower-s.webp) -94.9% 6120px no-repeat, url(../img/icons/square3.webp) 424% 1058px no-repeat, url(../img/icons/flower-s.webp) -160.9% 1462px no-repeat, url(../img/icons/square-second.webp) -463% 2077px no-repeat, url(../img/icons/flower-s.webp) 103% 2432px no-repeat, url(../img/icons/flower-s.webp) 171.9% 6553px no-repeat, url(../img/icons/square-second.webp) 417% 3131px no-repeat, url(../img/icons/flower-s.webp) -155% 3832px no-repeat, url(../img/icons/flower-s.webp) -147% 7002px no-repeat, url(../img/icons/square-second.webp) 427% 7808px no-repeat; }
+  ._webp .wrapper{ background: url(../img/icons/flower-m.webp) 107% 220px/181px no-repeat, url(../img/icons/flower-s.webp) -94.9% 6120px no-repeat, url(../img/icons/square3.webp) 424% 1058px no-repeat, url(../img/icons/flower-s.webp) -160.9% 1462px no-repeat, url(../img/icons/square-second.webp) -463% 2077px no-repeat, url(../img/icons/flower-s.webp) 103% 2670px/153px no-repeat, url(../img/icons/flower-s.webp) 171.9% 6553px no-repeat, url(../img/icons/square-second.webp) 417% 3131px no-repeat, url(../img/icons/flower-s.webp) -155% 3832px no-repeat, url(../img/icons/flower-s.webp) -147% 7002px no-repeat, url(../img/icons/square-second.webp) 427% 7808px no-repeat; }
 }
