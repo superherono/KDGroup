@@ -28,22 +28,22 @@ function ibg() {
 ibg();
 //=======================================================================По клику обьект в контейнере с обьктами вешает кллас ну нажатый обьект=================================================================================
 
-const container = document.querySelector('.gallery__controls');
+// const container = document.querySelector('.gallery__controls');
 
-container.addEventListener('click', function (e) {
-	const arrows = document.querySelectorAll('.gallery__arrow');
-	const arrowCenter = document.querySelector('._arrow_center');
-	const target = e.target;
-	Array.from(arrows).forEach(arrow => {
-		arrow.classList.remove('_active');
-	});
-	target.classList.add('_active');
+// container.addEventListener('click', function (e) {
+// 	const arrows = document.querySelectorAll('.gallery__arrow');
+// 	const arrowCenter = document.querySelector('._arrow_center');
+// 	const target = e.target;
+// 	Array.from(arrows).forEach(arrow => {
+// 		arrow.classList.remove('_active');
+// 	});
+// 	target.classList.add('_active');
 	
-	Array.from(arrows).forEach(arrow => {
-		arrow.classList.remove('_active');
-	});
-	setTimeout(arrowCenter.classList.add('_active'), 888000);
-});
+// 	Array.from(arrows).forEach(arrow => {
+// 		arrow.classList.remove('_active');
+// 	});
+// 	setTimeout(arrowCenter.classList.add('_active'), 888000);
+// });
 //==================Smooth Scroll========================
 const anchors = document.querySelectorAll('a[href*="#"]');
 
