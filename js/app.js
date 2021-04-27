@@ -304,78 +304,145 @@ if (sliders) {
 
 function sliders_bild_callback(params) {}
 
-if (document.querySelector('.gallery')) {
-    let mainslider = new Swiper('.gallery__slider', {
-        /*
-            effect: 'fade',
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            */
-        observer: true,
-        observeParents: true,
-        slidesPerView: 3,
-        spaceBetween: 0,
-        autoHeight: true,
-        speed: 800,
-        //touchRatio: 0,
-        simulateTouch: false,
-        loop: true,
-        //preLoadImages: false,
-        //Lazy: true,
-        //Dotts
-        // pagination: {
-        //     el: '.gallery__dotts',
-        //     clickable: true,
-        // },
-        //Arrows
-        navigation: {
-            nextEl: '._arrow_next',
-            prevEl: '._arrow_prev',
+// if (document.querySelector('.gallery')) {
+//     let mainslider = new Swiper('.gallery__slider', {
+//         /*
+//             effect: 'fade',
+//             autoplay: {
+//                 delay: 3000,
+//                 disableOnInteraction: false,
+//             },
+//             */
+//         observer: true,
+//         observeParents: true,
+//         slidesPerView: 3,
+//         spaceBetween: 0,
+//         autoHeight: true,
+//         speed: 800,
+//         //touchRatio: 0,
+//         simulateTouch: false,
+//         loop: true,
+//         //preLoadImages: false,
+//         //Lazy: true,
+//         //Dotts
+//         // pagination: {
+//         //     el: '.gallery__dotts',
+//         //     clickable: true,
+//         // },
+//         //Arrows
+//         navigation: {
+//             nextEl: '._arrow_next',
+//             prevEl: '._arrow_prev',
+//         },
+//         breakpoints: {
+//             320: {
+//                 slidesPerView: 1,
+//                 spaceBetween: 10,
+//                 autoHeight: true,
+//             },
+//             640: {
+//                 slidesPerView: 2,
+//                 spaceBetween: 10,
+//                 autoHeight: true,
+//             },
+//             768: {
+//                 slidesPerView: 2,
+//                 spaceBetween: 20,
+//             },
+//             992: {
+//                 slidesPerView: 3,
+//                 spaceBetween: 40,
+//             },
+//             1268: {
+//                 slidesPerView: 3,
+//                 spaceBetween: 45,
+//             },
+//         },
+//         on: {
+//             lazyImageReady: function () {
+//                 ibg();
+//             },
+//         }
+//         //And if we need scrollbar
+//         //scrollbar: {
+//         //el: '.swiper-scrollbar',
+//         //},
+//     });
+
+//     //     let mainsliderImages = document.querySelectorAll('.gallery__slide');
+//     //     let mainsliderDotts = document.querySelectorAll('.gallery__controls .swiper-pagination-bullet');
+
+//     //     for (let index = 0; index < mainsliderImages.length; index++) {
+//     //         const mainsliderImage = mainsliderImages[index].querySelector('img').getAttribute('src');
+//     //         mainsliderDotts[index].style.backgroundImage = "url('" + mainsliderImage + "')";
+//     //     }
+// }
+
+//=====================================================
+
+let gallerySlider;
+let allSlides = document.querySelector('.gallery ._fraction__all');
+let allCurrentSlide = document.querySelector('.gallery ._fraction__current');
+const allSlidesCounter = document.querySelectorAll('.gallery__slide').length;
+
+gallerySlider = new Swiper('.gallery__slider', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    watchSlidesVisibility: true,
+    speed: 800,
+    loop: true,
+    //preloadImages: false,
+    //lazy: true,
+    // Dotts
+    navigation: {
+        nextEl: '.gallery__controls .arrow-right',
+        prevEl: '.gallery__controls .arrow-left',
+    },
+    pagination: {
+        el: '.gallery__progress',
+        type: 'progressbar',
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1.1,
+            spaceBetween: 15,
+            //autoHeight: true,
         },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                autoHeight: true,
-            },
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-                autoHeight: true,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-            },
-            1268: {
-                slidesPerView: 3,
-                spaceBetween: 45,
-            },
+        // when window width is >= 480px
+        550: {
+            slidesPerView: 2,
+            spaceBetween: 30
         },
-        on: {
-            lazyImageReady: function () {
-                ibg();
-            },
+        // when window width is >= 640px
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 30
         }
-        //And if we need scrollbar
-        //scrollbar: {
-        //el: '.swiper-scrollbar',
-        //},
-    });
+    },
+    on: {
+        lazyImageReady: function () {
+            ibg();
+        },
+        init: function (slider) {
+            allSlides.innerHTML = setZeroFormat(allSlidesCounter);
+        },
+        slideChange: function (slider) {
+            let currentSlide = ++slider.realIndex;
+            allCurrentSlide.innerHTML = setZeroFormat(currentSlide);
+        },
+    }
+});
 
-    //     let mainsliderImages = document.querySelectorAll('.gallery__slide');
-    //     let mainsliderDotts = document.querySelectorAll('.gallery__controls .swiper-pagination-bullet');
 
-    //     for (let index = 0; index < mainsliderImages.length; index++) {
-    //         const mainsliderImage = mainsliderImages[index].querySelector('img').getAttribute('src');
-    //         mainsliderDotts[index].style.backgroundImage = "url('" + mainsliderImage + "')";
-    //     }
+//=====================================================
+
+
+function setZeroFormat(item) {
+    let result = item >= 10 ? item : "0" + item;
+    return result;
 }
 //===============Animation on scroll====================
 
